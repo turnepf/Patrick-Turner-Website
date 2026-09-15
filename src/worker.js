@@ -1,11 +1,12 @@
-// Serves the static site from ./public. The only logic: www and any other
-// stray hostname permanently redirect to the apex domain.
+// Serves the static site from ./public. The only logic: plain http, www and
+// any other stray hostname permanently redirect to https://patrickturner.net.
 const CANONICAL = 'patrickturner.net';
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.hostname !== CANONICAL && url.hostname !== 'localhost' && url.hostname !== '127.0.0.1') {
+    const local = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
+    if (!local && (url.hostname !== CANONICAL || url.protocol !== 'https:')) {
       url.hostname = CANONICAL;
       url.protocol = 'https:';
       url.port = '';
