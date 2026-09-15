@@ -1,0 +1,21 @@
+# patrickturner.net
+
+Patrick's personal site: an intro plus one section per app (Scoring Spades, Show Picker Club, Parjamie). Static HTML/CSS, no framework, no build step.
+
+## Workflow
+
+- **Commit straight to `main` and push.** No branches or PRs for this repo. Every push to `main` auto-deploys through Cloudflare Workers Builds (build command `node scripts/check.mjs`, deploy command `npx wrangler deploy`).
+- Run `node scripts/check.mjs` before pushing. If it fails, the deploy is blocked, so fix it rather than pushing anyway.
+- After pushing, confirm the change is live with `curl -s https://patrickturner.net/ | grep ...`.
+- Only `public/` is served. New pages or images go there.
+
+## Content rules
+
+- **Parjamie:** never use the trademarked name of the commercial board game it is based on, or any close spelling. Describe it as a race-home or cross-and-circle game. (Same rule as the Parjamie repo.)
+- **No location** on the site. Patrick asked for it to be removed.
+- **Show Picker Club code link:** don't add one until the repo `turnepf/Show-Picker-Club` is public. It was private as of 2026-09 pending a GitHub Support history purge.
+- App icons in `public/img/` are resized copies of each app's 1024px App Store icon from the sibling repos in `~/`.
+
+## Design
+
+Quiet chalk page with the name as the big type moment; each app gets a full-width band in its own icon colors (tokens `--app-*` in `styles.css`). Fonts: Bricolage Grotesque (display) and Public Sans (body) from Google Fonts, which the CSP in `public/_headers` allows. Light and dark mode via `prefers-color-scheme`.
