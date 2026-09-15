@@ -18,7 +18,7 @@ Patrick's personal site: an intro plus one section per app (Scoring Spades, Show
 
 ## Analytics
 
-Google Analytics 4, measurement ID `G-5PTJP40SXJ`. Every page's `<head>` loads the gtag script plus `/analytics.js` (the config lives there instead of inline so the CSP doesn't need `'unsafe-inline'`). New pages need both tags. The Google domains are allowlisted in `script-src`, `img-src` and `connect-src` in `public/_headers`.
+Google Analytics 4, measurement ID `G-5PTJP40SXJ`. Every page's `<head>` loads the gtag script plus `/analytics.js` (the config lives there instead of inline so the CSP doesn't need `'unsafe-inline'`). New pages need both tags. The Google domains are allowlisted in `script-src`, `img-src` and `connect-src` in `public/_headers`, as is Cloudflare Web Analytics (`static.cloudflareinsights.com` / `cloudflareinsights.com`), whose beacon Cloudflare injects automatically.
 
 ## Design
 
