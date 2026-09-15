@@ -16,6 +16,10 @@ Patrick's personal site: an intro plus one section per app (Scoring Spades, Show
 - **Show Picker Club code link:** don't add one until the repo `turnepf/Show-Picker-Club` is public. It was private as of 2026-09 pending a GitHub Support history purge.
 - App icons in `public/img/` are resized copies of each app's 1024px App Store icon from the sibling repos in `~/`.
 
+## Analytics
+
+Google Analytics 4, measurement ID `G-5PTJP40SXJ`. Every page's `<head>` loads the gtag script plus `/analytics.js` (the config lives there instead of inline so the CSP doesn't need `'unsafe-inline'`). New pages need both tags. The Google domains are allowlisted in `script-src`, `img-src` and `connect-src` in `public/_headers`.
+
 ## Design
 
 Quiet chalk page with the name as the big type moment; each app gets a full-width band in its own icon colors (tokens `--app-*` in `styles.css`). Fonts: Bricolage Grotesque (display) and Public Sans (body) from Google Fonts, which the CSP in `public/_headers` allows. Light and dark mode via `prefers-color-scheme`.
