@@ -1,6 +1,6 @@
 # patrickturner.net
 
-Patrick's personal site: an intro plus one section per app (Scoring Spades, Show Picker Club, Parjamie). Static HTML/CSS, no framework, no build step.
+Patrick's personal site: an intro plus one section per app (Show Picker Club, Parjamie, Scoring Spades). Static HTML/CSS, no framework, no build step.
 
 ## Workflow
 
