@@ -11,7 +11,7 @@ Patrick's personal site: an intro plus one section per app (Scoring Spades, Show
 
 ## Content rules
 
-- **Parjamie:** never use the trademarked name of the commercial board game it is based on, or any close spelling. Describe it as a race-home or cross-and-circle game. (Same rule as the Parjamie repo.)
+- **Parjamie:** never use the trademarked names of the modern commercial games in this family, or any close spelling. Describe it as a race-home or cross-and-circle game. (Same rule as the Parjamie repo, whose CLAUDE.md is the source of truth for the wording.)
 - **No location** on the site. Patrick asked for it to be removed.
 - **Show Picker Club code link:** don't add one until the repo `turnepf/Show-Picker-Club` is public. It was private as of 2026-09 pending a GitHub Support history purge.
 - App icons in `public/img/` are resized copies of each app's 1024px App Store icon from the sibling repos in `~/`.
