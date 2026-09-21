@@ -6,7 +6,7 @@ Plain static HTML/CSS in `public/`, no build step, served by a Cloudflare Worker
 
 ## How changes go live
 
-Push to `main`. Cloudflare Workers Builds picks up the commit, runs `node scripts/check.mjs`, and if that passes runs `npx wrangler deploy`. If the check fails, nothing deploys and the live site stays as it was.
+Push to `main`. Cloudflare Workers Builds picks up the commit, installs the pinned dependencies from `package-lock.json`, runs `node scripts/check.mjs`, and if that passes runs `npx wrangler deploy`. If the check fails, nothing deploys and the live site stays as it was.
 
 - Check locally: `node scripts/check.mjs`
 - Preview locally: `npx wrangler dev` (or `npx serve public`)
@@ -19,3 +19,4 @@ Push to `main`. Cloudflare Workers Builds picks up the commit, runs `node script
 | `src/worker.js` | Redirects `www` and any other hostname to `patrickturner.net`, then serves `public/` |
 | `scripts/check.mjs` | Pre-deploy gate: missing local files, broken `#anchors`, unbalanced tags, dead external links |
 | `wrangler.jsonc` | Worker config and the two custom domains |
+| `package.json` / `package-lock.json` | Pins the exact Wrangler version a deploy is allowed to use |

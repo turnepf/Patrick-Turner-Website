@@ -1,0 +1,13 @@
+{
+  "name": "patrickturner-net",
+  "private": true,
+  "description": "patrickturner.net. Wrangler is pinned so a deploy can never pull an unreviewed release.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "4.136.0"
+  }
+}
