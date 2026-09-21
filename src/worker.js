@@ -10,7 +10,19 @@ export default {
       url.hostname = CANONICAL;
       url.protocol = 'https:';
       url.port = '';
-      return Response.redirect(url.toString(), 301);
+      // Built by hand rather than with Response.redirect: this response never
+      // touches env.ASSETS, so public/_headers does not apply to it and HSTS
+      // has to be set here. Without it a visitor who only ever types the www
+      // host never gets the apex's includeSubDomains pin.
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: url.toString(),
+          'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+          'X-Content-Type-Options': 'nosniff',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+        },
+      });
     }
     return env.ASSETS.fetch(request);
   },
