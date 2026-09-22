@@ -1,6 +1,6 @@
 # patrickturner.net
 
-Patrick's personal site: an intro plus one section per app (Show Picker Club, Parjamie, Scoring Spades). Static HTML/CSS, no framework, no build step.
+Patrick's personal site: an intro plus one section per app (Show Picker Club, Parjamie, Scoring Spades) and one for Ali's shop, Shell Seeker by Ali (its icon is the scallop from her business card in `~/Shell-Seeker/brand/`, in the shop's sand and green). Static HTML/CSS, no framework, no build step.
 
 ## Workflow
 

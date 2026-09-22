@@ -183,6 +183,16 @@ a:hover { text-decoration-thickness: 2px; }
   background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.018) 0 2px, transparent 2px 5px);
 }
 .app--parjamie .facts li::before { background: #f39a3b; }
+.app--shell {
+  --app-bg: #e6cdb5;
+  --app-ink: #045c4a;
+  --app-soft: #3d5249;
+  --app-line: #b9a999;
+  --app-accent: #045c4a;
+  --app-accent-hover: #023d31;
+  --app-on-accent: #ffffff;
+}
+.app--shell .btn:hover { background: rgb(255 255 255 / 0.3); }
 
 /* About */
 .about { padding-block: clamp(64px, 10vw, 120px); }
