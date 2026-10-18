@@ -224,3 +224,11 @@ a:hover { text-decoration-thickness: 2px; }
   .shelf { flex-direction: column; }
   .top nav a[href^="mailto"] { display: none; }
 }
+
+/* Plain reading pages (app privacy policies and support) */
+.doc { padding-block: clamp(40px, 8vw, 96px); max-width: 720px; }
+.doc h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 8px; }
+.doc .dated { color: var(--muted); margin: 0 0 32px; }
+.doc h2 { font-family: var(--display); font-weight: 700; font-size: 1.35rem; margin: 32px 0 8px; }
+.doc p, .doc li { font-size: 1.05rem; line-height: 1.6; }
+.doc ul { padding-left: 1.2em; }
