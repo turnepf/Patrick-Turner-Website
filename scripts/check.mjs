@@ -26,7 +26,7 @@ for (const page of pages) {
     if (ref.startsWith('#')) {
       if (ref.length > 1 && !ids.has(ref.slice(1))) problems.push(`${page}: no element with id for ${ref}`);
     } else if (/^https?:\/\//.test(ref)) {
-      if (!/fonts\.(googleapis|gstatic)\.com\/?$|fonts\.googleapis\.com\/css2|patrickturner\.net\/?$/.test(ref)) external.add(ref);
+      if (!/fonts\.(googleapis|gstatic)\.com\/?$|fonts\.googleapis\.com\/css2|patrickturner\.net(\/|$)/.test(ref)) external.add(ref);
     } else {
       const path = ref.split(/[?#]/)[0];
       const file = path === '/' ? 'index.html' : path.replace(/^\//, '');
